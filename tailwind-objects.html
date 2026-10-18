@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind დავალება 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-800">
+    <div class="mx-auto max-w-6xl p-4 sm:p-6">
+        <header class="mb-6 rounded-xl border border-slate-300 bg-white p-6">
+            <h1 class="mb-3 text-3xl font-bold">დავალება 3 - ობიექტების დეტალური გაფორმება Tailwind-ით</h1>
+            <p class="text-base text-slate-600">
+                გვერდზე ნაჩვენებია Tailwind utility class-ების გამოყენება: ფორმები, ღილაკები, ბმულების მდგომარეობები,
+                რესპონსიული ბლოკები, `flex`, `grid`, `border`, `rounded`, `transform`, `transition`, `bg`, `font`, `text`.
+            </p>
+        </header>
+
+        <main class="grid gap-6 lg:grid-cols-2">
+            <section class="rounded-xl border border-slate-300 bg-white p-6">
+                <h2 class="mb-4 text-2xl font-bold">1. ინტერაქტიული ელემენტები</h2>
+
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="mb-2 block font-medium">სახელი</label>
+                        <input
+                            id="name"
+                            type="text"
+                            placeholder="შეიყვანე სახელი"
+                            class="w-full rounded-lg border border-slate-400 bg-white px-4 py-2 text-slate-800 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="email" class="mb-2 block font-medium">ელფოსტა</label>
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="example@mail.com"
+                            class="w-full rounded-lg border border-slate-400 bg-white px-4 py-2 text-slate-800 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="message" class="mb-2 block font-medium">შეტყობინება</label>
+                        <textarea
+                            id="message"
+                            rows="4"
+                            placeholder="დაწერე ტექსტი"
+                            class="w-full rounded-lg border border-slate-400 bg-white px-4 py-2 text-slate-800 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
+                        ></textarea>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <button
+                            type="submit"
+                            class="rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700 active:scale-95"
+                        >
+                            გაგზავნა
+                        </button>
+                        <button
+                            type="reset"
+                            class="rounded-lg border border-slate-400 bg-slate-200 px-5 py-2 font-semibold text-slate-800 transition hover:bg-slate-300 active:scale-95"
+                        >
+                            გასუფთავება
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-6">
+                    <h3 class="mb-3 text-xl font-semibold">ბმულების მდგომარეობები</h3>
+                    <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                        <a
+                            href="https://tailwindcss.com/"
+                            target="_blank"
+                            class="text-blue-600 underline decoration-2 underline-offset-4 transition hover:text-blue-800 active:text-red-600 visited:text-purple-700"
+                        >
+                            Tailwind ბმული
+                        </a>
+                        <a
+                            href="https://developer.mozilla.org/"
+                            target="_blank"
+                            class="text-green-600 underline decoration-2 underline-offset-4 transition hover:text-green-800 active:text-red-600 visited:text-purple-700"
+                        >
+                            MDN ბმული
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="rounded-xl border border-slate-300 bg-white p-6">
+                <h2 class="mb-4 text-2xl font-bold">2. ბლოკების მართვა და ანიმაცია</h2>
+
+                <div class="mb-4 grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-xl border border-slate-300 bg-blue-100 p-4 transition hover:-translate-y-1 hover:shadow-lg">
+                        <h3 class="mb-2 text-lg font-semibold">ბლოკი 1</h3>
+                        <p class="text-sm text-slate-700">
+                            გამოყენებულია `p-4`, `border`, `rounded-xl`, `bg-blue-100`, `transition`, `transform`.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-300 bg-green-100 p-4 transition hover:scale-105 hover:shadow-lg">
+                        <h3 class="mb-2 text-lg font-semibold">ბლოკი 2</h3>
+                        <p class="text-sm text-slate-700">
+                            გამოყენებულია `grid` განლაგება, `hover:scale-105` და გლუვი გადასვლა.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 md:flex-row">
+                    <div class="flex-1 rounded-xl border border-slate-300 bg-yellow-100 p-4 transition hover:bg-yellow-200">
+                        <h3 class="mb-2 text-lg font-semibold">Flex ბლოკი</h3>
+                        <p class="text-sm text-slate-700">
+                            ეს ნაწილი აჩვენებს `flex` სისტემის გამოყენებას რესპონსიულ განლაგებაში.
+                        </p>
+                    </div>
+
+                    <div class="flex-1 rounded-xl border border-slate-300 bg-red-100 p-4 transition hover:bg-red-200">
+                        <h3 class="mb-2 text-lg font-semibold">Transition ბლოკი</h3>
+                        <p class="text-sm text-slate-700">
+                            ელემენტი მაუსის გადატარებაზე ცვლის ფონს და იყენებს `transition` კლასს.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="rounded-xl border border-slate-300 bg-white p-6 lg:col-span-2">
+                <h2 class="mb-4 text-2xl font-bold">3. ვიზუალური თვისებები</h2>
+
+                <div class="grid gap-4 md:grid-cols-3">
+                    <div class="rounded-xl border border-slate-300 bg-slate-50 p-4">
+                        <h3 class="mb-2 text-lg font-semibold">bg- კლასები</h3>
+                        <p class="text-sm text-slate-700">
+                            ფონის სამართავად გამოყენებულია `bg-white`, `bg-slate-100`, `bg-blue-100`, `bg-green-100`.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-300 bg-slate-50 p-4">
+                        <h3 class="mb-2 text-lg font-semibold">font- კლასები</h3>
+                        <p class="text-sm font-medium text-slate-700">
+                            ტექსტებზე გამოყენებულია `font-medium`, `font-semibold`, `font-bold`.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-300 bg-slate-50 p-4">
+                        <h3 class="mb-2 text-lg font-semibold">text- კლასები</h3>
+                        <p class="text-sm text-slate-700">
+                            ტექსტზე გამოყენებულია `text-2xl`, `text-lg`, `text-sm`, `text-slate-700`, `text-blue-600`.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

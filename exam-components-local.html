@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ცხრილი და ფორმა</title>
+    <link rel="stylesheet" href="styles/components.css" />
+  </head>
+  <body>
+    <main>
+      <section class="table-section">
+        <h2>Front-end კურსის მონაწილეების შედეგები</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>
+              სტუდენტების შუალედური შეფასებები
+            </caption>
+            <thead>
+              <tr>
+                <th rowspan="2" scope="col">№</th>
+                <th rowspan="2" scope="col">სტუდენტი</th>
+                <th colspan="3" scope="colgroup">შეფასებები</th>
+                <th rowspan="2" scope="col">საშუალო</th>
+              </tr>
+              <tr>
+                <th scope="col">HTML</th>
+                <th scope="col">CSS</th>
+                <th scope="col">JavaScript</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>ნიკა</td>
+                <td>85</td>
+                <td>90</td>
+                <td>88</td>
+                <td>87.6</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>მარიამი</td>
+                <td>92</td>
+                <td>95</td>
+                <td>93</td>
+                <td>93.3</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>გიორგი</td>
+                <td>70</td>
+                <td>75</td>
+                <td>72</td>
+                <td>72.3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">ჯგუფის საშუალო მაჩვენებელი</td>
+                <td>84.4</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <h3>ვიდეო</h3>
+        <iframe
+          src="https://www.youtube.com/embed/6swgiM9vSEE?list=RD6swgiM9vSEE&start_radio=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <form action="#" method="post">
+        <h2>რეგისტრაციის ფორმა</h2>
+
+        <fieldset>
+          <legend>პირადი ინფორმაცია</legend>
+          <label for="fname">სახელი:</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="შეიყვანეთ სახელი"
+            required
+            maxlength="20"
+          />
+
+          <label for="email">ელ-ფოსტა:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@mail.com"
+            required
+          />
+
+          <label for="pass">პაროლი:</label>
+          <input type="password" id="pass" name="pass" required minlength="8" />
+
+          <label for="age">ასაკი:</label>
+          <input type="number" id="age" name="age" min="18" max="100" />
+
+          <label for="bday">დაბადების თარიღი:</label>
+          <input type="date" id="bday" name="bday" />
+        </fieldset>
+
+        <fieldset>
+          <legend>სქესი</legend>
+          <div class="inline-options">
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">მამაკაცი</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">ქალი</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>ინტერესები</legend>
+          <div class="inline-options">
+            <input type="checkbox" id="html" name="interest" value="HTML" />
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="interest" value="CSS" />
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="interest" value="JS" />
+            <label for="js">JavaScript</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>აირჩიეთ კურსი</legend>
+          <label for="course">კურსი:</label>
+          <select id="course" name="course">
+            <option value="">აირჩიეთ</option>
+            <option value="front">Front-end</option>
+            <option value="back">Back-end</option>
+            <option value="design">UI/UX Design</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>დამატებითი ინფორმაცია</legend>
+          <label for="msg">შეტყობინება:</label>
+          <textarea
+            id="msg"
+            name="msg"
+            rows="4"
+            placeholder="დაწერეთ ტექსტი..."
+          ></textarea>
+
+          <label for="myfile">ატვირთეთ ფაილი:</label>
+          <input type="file" id="myfile" name="myfile" />
+        </fieldset>
+
+        <fieldset>
+          <legend>დადასტურება</legend>
+          <div class="inline-options">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">ვეთანხმები წესებს</label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <input type="submit" value="გაგზავნა" />
+          <input type="reset" value="გასუფთავება" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

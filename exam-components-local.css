@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #243041;
+  line-height: 1.5;
+}
+
+main {
+  padding: 32px 16px 48px;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-section,
+.video-section,
+form {
+  max-width: 1000px;
+  margin: 0 auto 32px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
+}
+
+.table-section h2,
+.video-section h3,
+form h2 {
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f766e;
+}
+
+table th,
+table td {
+  border: 1px solid #d9e2ec;
+  padding: 12px;
+  text-align: center;
+}
+
+table thead {
+  background: #dff5ef;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tfoot td {
+  text-align: left;
+  font-weight: 700;
+  background: #eef6ff;
+}
+
+video,
+audio,
+iframe {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.video-section {
+  display: grid;
+  gap: 16px;
+}
+
+iframe {
+  min-height: 315px;
+  border: 0;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+form fieldset {
+  border: 1px solid #d7dee8;
+  border-radius: 14px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+form label,
+form legend {
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #c8d2df;
+  border-radius: 10px;
+  font: inherit;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 3px solid rgba(15, 118, 110, 0.15);
+  border-color: #0f766e;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.inline-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline-options input {
+  width: auto;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.form-actions input {
+  width: auto;
+  min-width: 140px;
+  border: none;
+  background: #0f766e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-actions input[type="reset"] {
+  background: #64748b;
+}
+
+@media (max-width: 640px) {
+  .table-section,
+  .video-section,
+  form {
+    padding: 18px;
+  }
+
+  .inline-options {
+    align-items: flex-start;
+  }
+
+  .form-actions input {
+    width: 100%;
+  }
+}
